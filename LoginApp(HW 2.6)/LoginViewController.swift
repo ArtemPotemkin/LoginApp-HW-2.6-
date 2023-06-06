@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
@@ -30,6 +31,7 @@ class LoginViewController: UIViewController {
         super .touchesBegan(touches, with: event)
     }
 
+    // MARK: - IBActions
     @IBAction func loginButtonTapped() {
         guard userNameTF.text == userName, passwordTF.text == password else {
             showAlert(whith: "Error!", and: "Invalid User Name or Password")
